@@ -1,34 +1,22 @@
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
+// const { userSample } = require('./data/sampleData');
+// import { userSample } from './data/sampleData';
+import './domUpdates'; 
+import { users } from './data/users';
+import './css/styles';
 
-// An example of how you tell webpack to use a CSS file
-// const styles = require('./css/styles.css')
-// import './css/styles.css';
 
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
-// import './images/turing-logo.png';
-
-// An example of how you tell webpack to use a JS file
-// import userData from './data/users';
-const { userSample } = require('./data/sampleData')
-
-// import sampleData from './data/sampleData';
-// console.log("User Data:", userData);
-
-// Example of one way to import functions from the domUpdates file.  You will delete these examples.
-// import { exampleFunction1, exampleFunction2 } from './domUpdates';
-
-// exampleFunction1('Travis');
-// exampleFunction2('Travis')
-
-function getUserData(userSample, userID) {
-    return userSample.find((user) => { 
-        return user.id === userID
-    })
+function getRandomUser(userData) {
+    const currentUserIndex = Math.floor(Math.random() * userData.length);
+    return currentUserIndex;
+  };
+function getUserData(userObj, indexPosition) {
+    currentUser = userObj.find((user) => {
+        return user.id === indexPosition
+    });
+    return currentUser;
 }
-
+console.log(getRandomUser(users));
 // console.log(getUserData(userSample,1))
-
 function getAverageStepGoal(userSample) {
     const total = userSample.reduce((accum,user) => {
         return accum += user.dailyStepGoal
@@ -36,10 +24,37 @@ function getAverageStepGoal(userSample) {
     return (total / userSample.length).toFixed(0)
 }
 
+window.addEventListener('load', function() {
+    getRandomUser(users);
+    console.log('page loaded')
+    console.log(currentUser);
+    console.log(getRandomUser(userSample))
+    console.log(displayUserInfo(currentUser));
+    displayUserInfo(currentUser);
+    //As a user, I should be able to view an info card with all of my info on the page
+    //As a user, I should be able to see my first name somewhere prominently on the page to welcome me
+    //As a user, I should be able to see how my step goal compares to the average step goal amongst all users (this display should not be hard-coded)
+  });
 // console.log(getAverageStepGoal(userSample))
+  console.log(getRandomUser(userSample)); //returns one object from sample data
 
-function getRandomUser(userSample) {
-    const currentUserIndex = Math.floor(Math.random() * userSample.length)
-    const currentUser = userSample[currentUserIndex]
-    return currentUser
-  };
+
+
+
+
+5:02
+//NOTE: Your DOM manipulation will occur in this file
+// const { userSample } = require('./data/sampleData');
+// const { getRandomUser, currentUser } = require('./scripts');
+import { userSample } from './data/sampleData';
+import { getRandomUser, currentUser } from './scripts';
+//QuerySelectors here:
+const userName = document.querySelector('#username');
+const location = document.querySelector('#location');
+function displayUserInfo(currentUser) {
+  userName.innerHTML = `${currentUser.name}`
+  location.innerText = `${currentUser.location}`
+}
+export {
+  displayUserInfo
+}
