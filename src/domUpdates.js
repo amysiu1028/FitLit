@@ -1,5 +1,5 @@
-const { userSample } = require("./data/sampleData");
-const { getRandomUser, getUserData, getAverageStepGoal } = require("./data-model.js");
+const { userSample } = ("./data/sampleData");
+const { getRandomUser, getUserData, getAverageStepGoal } = ("./data-model.js");
 
 const userName = document.querySelector("#username");
 const location = document.querySelector("#location");
