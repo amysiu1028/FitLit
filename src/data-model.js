@@ -1,10 +1,13 @@
-
 //Functions Here:
 
 export function getRandomUser(userData) {
-    const currentUserIndex = Math.floor(Math.random() * userData.length);
-      return currentUserIndex;
-    };
+  if (userData.length === 0) {
+    return undefined;
+  }
+
+  const currentUserIndex = Math.floor(Math.random() * userData.length);
+  return currentUserIndex;
+}
   
   export function getUserData(userObj, indexPosition) {
       let currentUser = userObj.find((user) => {
