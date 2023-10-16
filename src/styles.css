@@ -6,18 +6,19 @@
 
 body {
   display: flex;
-  width: 2000px;
-  height: 1600px;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
   background-color: #050E2B;
   color: #2A2B2C;
 }
 
 header {
-  display: flex; 
-  flex-direction: column;
+  /* display: flex; 
+  flex-direction: column; */
   height: 200px;
   width: 800px;
-  background-color: #DBF0FF;
+  color: white;
 }
 
 .main-row {
@@ -26,21 +27,31 @@ header {
   margin: 30px;
 }
 
+#leftMainRow {
+  width: 75vw;
+}
+
+#right-main-row {
+  width: 25vw;
+  height: 100vh;
+  background-color: #555d76;
+  
+}
+
 .left-section {
   display: flex;
   background-color: #DCF3E7;
   align-items: center;
   justify-content: center;
-  width: 1000px;
-  height: 400px;
+  height: 30vh;
   margin-top: 30px;
 }
 
 .first-row-left {
   flex-direction: row;
   background-color: #F3FDF6;
-  width: 200px;
-  height: 100px;
+  width: 25vw;
+  height: 25vh;
   margin: 20px;
   text-align: center;
 }
@@ -48,8 +59,8 @@ header {
 .second-row-left {
   flex-direction: row;
   background-color: #F3FDF6;
-  width: 300px;
-  height: 200px;
+  width: 50vw;
+  height: 25vh;
   margin: 20px;
 }
 
