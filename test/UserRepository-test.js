@@ -17,6 +17,23 @@ describe("getRandomUser", () => {
     expect(randomIndex).to.be.at.least(0);
     expect(randomIndex).to.be.at.most(users.length - 1);
   });
+
+  it("should return different indices on subsequent calls", () => {
+    const indices = new Set();
+    const numCalls = 100;
+    for (let i = 0; i < numCalls; i++) {
+      const randomIndex = getRandomUser(users);
+      indices.add(randomIndex);
+    }
+    expect(indices.size).to.be.above(1);
+  });
+
+  it("should handle an empty user data array", () => {
+    const emptyUserData = [];
+    const randomIndex = getRandomUser(emptyUserData);
+    expect(randomIndex).to.be.undefined; // Assuming you handle this case by returning undefined
+  });
+
 });
 
 describe('getUserData', () => {
