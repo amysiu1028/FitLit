@@ -23,6 +23,9 @@ export function displayUserInfo(currentUser, averageSteps, waterPerDayPerWeek, a
   steps.innerText = `Step Goal: ${stepGoal}`;
   usersAvgSteps.innerText = `The average users step goal: ${averageSteps}`;
 
+  // As a user, I should be able to see how my step goal compares to the average step goal amongst all users
+// (this display should not be hard-coded)
+
   //water info:
   waterConsumedToday.innerText = `Water Consumed Today (${todaysHydrationDate.date}): ${todaysHydrationDate.numOunces}oz`
   waterPerDayPerWeek.forEach((data) => {
@@ -56,5 +59,10 @@ export function displayUserInfo(currentUser, averageSteps, waterPerDayPerWeek, a
   activityPerDayPerWeek.forEach((data) => {
     weekStepCount.innerHTML += `<p> On ${data.date}, user's step count is ${data.numSteps}`;
 });
+
+
+
+// As a user, I should be able to view a weekly view of my step count and if I have reached my step 
+//count goal for each day
 };
 
