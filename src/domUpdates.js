@@ -42,7 +42,6 @@ export function displayUserInfo(currentUser, averageSteps, waterPerDayPerWeek, a
 
 
   //activity info:
-
   //As a user, I should be able to see my number of steps I’ve made for the latest day:
   stepsMadePerDay.innerText = `On ${activityToday.date}, total user's steps is: ${activityToday.numSteps}`;
 
