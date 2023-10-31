@@ -31,32 +31,32 @@ export const displayUserInfo = (currentUser, activityToday) => {
 
 // Water info:
 export const displayWaterInfo = (todaysHydrationDate, waterChartToDom) => {
-  waterConsumedToday.innerHTML = `<strong> Water Consumed Today:  </strong> ${todaysHydrationDate.numOunces} ounces`
+  waterConsumedToday.innerHTML = `<p> <strong> Water Consumed Today:  </strong> ${todaysHydrationDate.numOunces} ounces </p>`
   waterChart.innerHTML = waterChartToDom;
 };
  
 //Sleep info:
 export const displaySleepInfo = (averageSleep, aveSleepQuality, sleepToday, sleepChartToDom) => {
-  averageSleepOverall.innerHTML = `<strong> Average Overall Sleep: </strong> ${averageSleep} hours per day and Average<br> <strong> Sleep Quality: </strong> ${aveSleepQuality}`;
-  sleepSpecificDay.innerHTML += `<p> Today, user slept for ${sleepToday.hoursSlept} hours with sleep quality of ${sleepToday.sleepQuality}`;
+  averageSleepOverall.innerHTML = `<p> <strong> Average Overall Sleep: </strong> ${averageSleep} hours per day <br> <strong> Average Sleep Quality: </strong> ${aveSleepQuality} </p>`;
+  sleepSpecificDay.innerHTML += `<p> Today, user slept for ${sleepToday.hoursSlept} hours with sleep quality of ${sleepToday.sleepQuality} </p>`;
   sleepChart.innerHTML = sleepChartToDom;
 };
   
 //Activity info:
 export const displayActivityInfo = (milesPerDay, minutesPerDay, activityToday, activityChartToDom) => {
-    stepsMadePerDay.innerHTML = `<strong> Total user's steps today: </strong> ${activityToday.numSteps} steps.`;
-    minutesActivePerDay.innerHTML = `<strong> Total active minutes today: </strong> ${minutesPerDay} minutes today.`;
-    milesWalkedPerDay.innerHTML = `<strong> User has walked: </strong> ${milesPerDay} miles.`
+    stepsMadePerDay.innerHTML = `<p> <strong> Total user's steps today: </strong> ${activityToday.numSteps} steps </p>`;
+    minutesActivePerDay.innerHTML = `<p> <strong> Total active minutes today: </strong> ${minutesPerDay} minutes </p>`;
+    milesWalkedPerDay.innerHTML = `<p> <strong> User has walked: </strong> ${milesPerDay} miles </p>`
     activityChart.innerHTML = activityChartToDom;
   };
 
 //Step Info:
 export const displayStepInfo = (currentUser, stepGoal, stepChartToDom, compareSteps, averageSteps) => {
   stepChart.innerHTML = stepChartToDom;
-  steps.innerHTML = `<strong> Total Steps for Today: </strong> ${stepGoal.numSteps}<br>
+  steps.innerHTML = `<p> <strong> Total Steps for Today: </strong> ${stepGoal.numSteps}<br>
   <strong> Step Goal:</strong> ${currentUser.dailyStepGoal} steps <br>
-  <strong> Steps Left:</strong> ${stepGoal.stepsLeft} steps`;
-  usersAvgSteps.innerHTML = `<strong>The average users step goal:</strong> ${averageSteps} steps.`;
+  <strong> Steps Left:</strong> ${stepGoal.stepsLeft} steps </p>`;
+  usersAvgSteps.innerHTML = `<p> <strong>The average users step goal:</strong> ${averageSteps} steps </p>`;
   stepComparison.innerHTML = compareSteps;
 };
 
