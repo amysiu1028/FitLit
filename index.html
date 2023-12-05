@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fitlit</title>
+    <link rel="stylesheet" href="https://unpkg.com/js-datepicker/dist/datepicker.min.css">
+  </head>
+  <body>
+    <h1 class="error-message hidden"></h1>
+    <aside class="main-row asideOne" id="leftMainRow">
+      <header>
+        <h1 id="titles">Good Morning!</h1>
+        <h2 id="welcomeBack">Welcome Back</h2>
+        <h2 id="current-date"></h2>
+      </header>
+      <section class="left-section">
+        <section class="first-row-left" id="stepsBox">
+          <h1 class="titles" tabindex="0">Steps</h1>
+          <p class="steps-text" id="totalSteps"></p>
+          <p class="steps-text" id="averageUsersSteps"></p>
+          <p class="steps-text" id="stepComparison"></p>
+          <canvas id="stepChart" aria-label="Total Steps Per Week Graph" aria-describedby="stepsChartDescription" role="img"></canvas>
+          <p id="stepsChartDescription" class="sr-only">This chart displays the total number of steps taken per week, with data points for each day.</p>
+          <span class="sr-only">Total Steps: 10,000</span>
+        </section>
+        <section class="first-row-left" id="waterBox" tabindex="0">
+          <h1 class="titles" tabindex="0">Water</h1>
+          <p id="waterConsumedToday"></p>
+          <p id="waterEachDayOfWeek"></p>
+          <canvas id="waterChart" aria-label="Total Water In Ounces Per Week Consumed Graph" aria-describedby="waterChartDescription" role="img"></canvas>
+          <p id="waterChartDescription" class="sr-only">This chart displays the total water consumption in ounces per week, with data points for each day of the week.</p>
+          <span class="sr-only">Water Consumed Today: 64 ounces</span>
+        </section>
+      </section>
+      <section class="left-section">
+        <section class="second-row-left" id="activityBox">
+          <h1 class= "titles" tabindex="0">Activity</h1>
+          <p id="stepsMadePerDay"></p>
+          <p id="minutesActivePerDay"></p>
+          <p id="milesWalkedPerDay"></p>
+          <p id="weekStepCount"></p>
+          <canvas id="activityChart" aria-label="Total Activity Per Week Graph" aria-describedby="activityChartDescription" role="img"></canvas>
+          <p id="activityChartDescription" class="sr-only">This chart displays the total activity per week, including steps made, minutes active, and miles walked per day.</p>
+          <span class="sr-only">Total Activity</span>
+        </section>
+        <section class="second-row-left" id="sleepBox">
+          <h1 class="titles" tabindex="0">Sleeping</h1>
+          <h2>Hours Slept</h2>
+          <p id="averageSleepOverall"></p>
+          <p id="sleepSpecificDay"></p>
+          <p id="sleepPerDayPerWeek"></p>
+          <canvas id="sleepChart" aria-label="Total Sleep Accumulated Graph" aria-describedby="sleepChartDescription" role="img"></canvas>
+          <p id="sleepChartDescription" class="sr-only">This chart displays the total hours of sleep accumulated, with data points for specific days and weekly totals.</p>
+          <span class="sr-only">Total Hours of Sleep</span>
+        </section>
+      </section>
+    </aside>
+    <aside class="main-row asideTwo" id="rightMainRow">
+       <h1 id="username"> Username </h1>
+       <header id="buttonHolder">
+           <button class="toggleButton">
+             <h2 class="arrow">&#x25BA;    User Info:</h3> 
+             <h2 class="user-info hidden"></h3>
+           </button>
+       </header>
+       <form class="form">
+         <label for="dateInput" class="labels">Enter Date:</label>
+         <input type="text" placeholder="YYYY/MM/DD" id="dateInput" required/>
+         <label for="ouncesInput" class="labels">Number of Ounces:</label>
+         <input type="text" placeholder="Enter a whole number" id="ouncesInput" required/>
+         <button id="addButton">ADD</button>
+         <h2 class="error hidden">Error Message</h2>
+       </form>
+    </aside>
+    <script src="https://unpkg.com/js-datepicker"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>
