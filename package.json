@@ -6,7 +6,11 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
-    "test": "mochapack 'test/**/*.js'"
+    "test": "mochapack 'test/**/*.js'",
+    "predeploy": "npm run build", 
+		"deploy": "gh-pages -d dist",
+    "start": "webpack serve",
+    "lint": "./node_modules/.bin/eslint 'src/**.js' 'test/**.js'"
   },
   "author": "Turing School of Software and Design",
   "license": "MIT",
@@ -29,5 +33,15 @@
     "interact.js": "^1.2.8",
     "interactjs": "^1.10.19",
     "js-datepicker": "^5.18.2"
-  }
-}
+  },
+  {
+	"homepage": "https://amysiu1028.github.io/FitLit", 
+  "name": "FitLit", 
+  "version": "2.0.0",
+  "description": "Project starter kit using webpack, mocha, chai, and SCSS/SASS enabled", 
+  "main": "src/scripts.js", 
+  "repository": { 
+    "type": "git",
+    "url": "git+https://github.com/amysiu1028/FitLit.git" 
+},
+  
