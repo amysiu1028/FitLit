@@ -2,8 +2,7 @@
     "builds": [
       {
         "src": "webpack.config.js", 
-        "use": "@vercel/static-build",
-        "config": { "maxLambdaSize": "15mb" }
+        "use": "@vercel/static-build"
       }
     ],
     "routes": [
