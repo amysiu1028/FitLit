@@ -5,7 +5,8 @@
   "main": "scripts.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --mode production"
+    "predeploy": "npm run build", 
+    "build": "webpack"
   },
   "author": "Turing School of Software and Design",
   "license": "MIT",
