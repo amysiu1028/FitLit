@@ -5,10 +5,7 @@
   "main": "scripts.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --mode production",
-    "test": "mochapack 'test/**/*.js'",
-    "predeploy": "npm run build", 
-		"deploy": "gh-pages -d dist"
+    "build": "webpack --mode production"
   },
   "author": "Turing School of Software and Design",
   "license": "MIT",
