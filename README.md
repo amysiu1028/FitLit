@@ -3,7 +3,6 @@
 # 💪 FitLit 
 ![Tests](https://badgen.net/badge/tests/passing/green?icon=github)
 
-
 ## 💾 Technologies Used
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -31,6 +30,9 @@ FitLit revolutionizes the health tracking experience by seamlessly blending styl
 
 ## 📝  Context
 We are a 4 group of front-end developers who worked together remotely via Zoom and asynchronously through the GitHub project board to complete this application. This project was completed from week 2 to week 4 in Mod 2 of the Front End development program at Turing School of Software & Design. 
+
+## Link: 
+[Live Github Link](https://amysiu1028.github.io/FitLit/)
 
 ## 🎥 Preview 
 ![Fitlit Example](Fitlit_Example.gif)
